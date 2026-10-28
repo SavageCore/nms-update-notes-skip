@@ -3,7 +3,7 @@
 # the notes button still works).
 [mod]
 id = "eu.savagecore.update_notes_skip"
-version = "0.0.0"
+version = "0.1.0"
 label = "Update Notes Skip"
 description = "Skips the No Man's Sky update notes page on startup."
 enabled = true
