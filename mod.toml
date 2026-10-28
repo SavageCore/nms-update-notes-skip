@@ -1,0 +1,73 @@
+# update_notes_skip: skip the auto-opening update notes page on startup
+# by forcing its unseen-notes gate jump to always skip (manual open via
+# the notes button still works).
+[mod]
+id = "eu.savagecore.update_notes_skip"
+version = "0.0.0"
+label = "Update Notes Skip"
+description = "Skips the No Man's Sky update notes page on startup."
+enabled = true
+
+[[mod.text]]
+lang = "nl"
+description = "Slaat de update-opmerkingenpagina van No Man's Sky bij het opstarten over."
+
+[[mod.text]]
+lang = "de"
+description = "Überspringt die Update-Hinweisseite von No Man's Sky beim Start."
+
+[[mod.text]]
+lang = "fr"
+description = "Ignore la page des notes de mise à jour de No Man's Sky au démarrage."
+
+[[mod.text]]
+lang = "it"
+description = "Salta la pagina delle note di aggiornamento di No Man's Sky all'avvio."
+
+[[mod.text]]
+lang = "es"
+description = "Omite la página de notas de actualización de No Man's Sky al iniciar."
+
+[[mod.text]]
+lang = "es-419"
+description = "Omite la página de notas de actualización de No Man's Sky al iniciar."
+
+[[mod.text]]
+lang = "ru"
+description = "Пропускает страницу примечаний к обновлению No Man's Sky при запуске."
+
+[[mod.text]]
+lang = "pl"
+description = "Pomija stronę informacji o aktualizacji No Man's Sky przy starcie."
+
+[[mod.text]]
+lang = "pt"
+description = "Ignora a página de notas de atualização do No Man's Sky ao arrancar."
+
+[[mod.text]]
+lang = "pt-BR"
+description = "Pula a página de notas de atualização do No Man's Sky na inicialização."
+
+[[mod.text]]
+lang = "ja"
+description = "No Man's Skyの起動時アップデートノートページをスキップします。"
+
+[[mod.text]]
+lang = "zh"
+description = "跳过No Man's Sky启动时的更新说明页面。"
+
+[[mod.text]]
+lang = "zh-Hant"
+description = "跳過No Man's Sky啟動時的更新說明頁面。"
+
+[[mod.text]]
+lang = "ko"
+description = "No Man's Sky 시작 시 업데이트 노트 페이지를 건너뜁니다."
+
+[[patch]]
+id = "patch-notes"
+op = "write-bytes"
+pattern = "83 b9 d8 0a 00 00 0c 4c 8b f2 48 8b f1 0f 84 ?? ?? ?? ?? 44 0f b6 0d ?? ?? ?? ?? 45 84 c9"
+offset = 30
+expect = "74"
+bytes = "eb"
